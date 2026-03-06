@@ -21,6 +21,7 @@ Running the Engine
 -Option 3: Exit the program.
 
 # Classification Strategy
+```bash
 1.Flattened Syllabus Injection
 -Rather than providing raw, unstructured data, the syllabus is "flattened" into a searchable, text-based knowledge.
 -LLMs process linear text more efficiently and accurately than complex nested structures, leading to more reliable classification.
@@ -34,14 +35,17 @@ Running the Engine
 
 4.Granularity-First Selection
 -If a question fits more than one category, the engine is programmed to choose the most specific outcome available in the syllabus hierarchy.
+```
 
 # Performance Summary
 The engine currently demonstrates high accuracy at the structural levels of the syllabus, with opportunities for refinement at the granular learning outcome level:
 
+```bash
 Accuracy [STRAND         ]:  97.01%
 Accuracy [SUBSTRAND      ]:  97.01%
 Accuracy [TOPIC          ]:  74.63%
 Accuracy [LEARNINGOUTCOME]:  56.72%
 Accuracy [LOID           ]:  55.22%
+```
 
 Learning Outcome and loId accuracy is lower because many syllabus points are very similar. The best way to improve this is to split the classification into two steps. This reduces complexity and helps the model focus on a smaller number of choices at each stage.
